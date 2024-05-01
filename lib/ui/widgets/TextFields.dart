@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../../res/colors/app_colors.dart';
 
-class PlainTextFieldWidget extends StatelessWidget {
+class GrayLabeledTextField extends StatelessWidget {
 
-  const PlainTextFieldWidget({
+  const GrayLabeledTextField({
     super.key,
     required this.label,
     required this.onChanged,

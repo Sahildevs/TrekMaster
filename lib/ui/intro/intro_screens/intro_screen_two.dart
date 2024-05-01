@@ -38,7 +38,7 @@ class IntroScreenTwo extends StatelessWidget {
                     fontFamily: 'Raleway',
                     fontSize: 36,
                     fontWeight: FontWeight.w600,
-                    color: AppColors.primaryWhite
+                    color: AppColors.white
                 )
             ),
 
@@ -50,7 +50,7 @@ class IntroScreenTwo extends StatelessWidget {
                     fontFamily: 'Manrope',
                     fontSize: 17,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.primaryWhite
+                    color: AppColors.white
                 )
             ),
 
@@ -60,7 +60,7 @@ class IntroScreenTwo extends StatelessWidget {
                     fontFamily: 'Manrope',
                     fontSize: 17,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.primaryWhite
+                    color: AppColors.white
                 )
             ),
 

@@ -6,7 +6,7 @@ import 'package:trek_master/bloc/auth/phoneAuth/phone_auth_bloc.dart';
 import 'package:trek_master/ui/widgets/Buttons.dart';
 
 import '../../../res/colors/app_colors.dart';
-import '../../widgets/PlainTextFieldWidget.dart';
+import '../../widgets/TextFields.dart';
 
 class PhoneAuthScreenWidget extends StatefulWidget {
   const PhoneAuthScreenWidget({super.key});
@@ -79,14 +79,13 @@ class _PhoneAuthScreenWidgetState extends State<PhoneAuthScreenWidget> {
               const SizedBox(height: 30,),
 
 
-              PlainTextFieldWidget(
+              GrayLabeledTextField(
                 label: 'Enter Phone Number',
                 onChanged: (val) { },
               ),
 
               const SizedBox(height: 24,),
-
-              // BlueElevatedTextButton(phoneAuthBloc: _phoneAuthBloc),
+              
 
               BlueElevatedLabelButton(
                   label: 'Generate OTP',
@@ -106,39 +105,5 @@ class _PhoneAuthScreenWidgetState extends State<PhoneAuthScreenWidget> {
   }
 }
 
-// class BlueElevatedTextButton extends StatelessWidget {
-//   const BlueElevatedTextButton({
-//     super.key,
-//     required PhoneAuthBloc phoneAuthBloc,
-//   }) : _phoneAuthBloc = phoneAuthBloc;
-//
-//   final PhoneAuthBloc _phoneAuthBloc;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: 50,
-//       child: ElevatedButton(
-//           onPressed: () {
-//             _phoneAuthBloc.add(NavigateToOtpAuthScreen());
-//           },
-//           style: ElevatedButton.styleFrom(
-//             backgroundColor: AppColors.primaryDarkBlue,
-//             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
-//           ),
-//           child: const Text(
-//               'Generate OTP',
-//               style: TextStyle(
-//                   fontFamily: 'Manrope',
-//                   fontSize: 14,
-//                   fontWeight: FontWeight.w500,
-//                   color: AppColors.primaryWhite
-//
-//               )
-//           )
-//       ),
-//     );
-//   }
-// }
 
 

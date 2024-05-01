@@ -10,6 +10,11 @@ class DashboardScreenWidget extends StatefulWidget {
 class _DashboardScreenWidgetState extends State<DashboardScreenWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+        )
+    );
   }
 }

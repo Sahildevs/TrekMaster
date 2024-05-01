@@ -4,6 +4,7 @@ import 'package:trek_master/routes/app_routes_constants.dart';
 import 'package:trek_master/ui/auth/otpAuth/otp_auth_screen.dart';
 import 'package:trek_master/ui/dashboard/dashboard_screen.dart';
 import 'package:trek_master/ui/intro/intro_screen.dart';
+import 'package:trek_master/ui/profile/profile_screen.dart';
 import 'package:trek_master/ui/splash/splash_screen.dart';
 import '../ui/auth/phoneAuth/phone_auth_screen.dart';
 
@@ -51,6 +52,15 @@ final GoRouter goRouter = GoRouter(
             }
           )
         ]
+      ),
+
+      /** Top-Level Route **/
+      GoRoute(
+          path: '/profile',
+          name: AppRouteConstants.profileSetupScreenRoute,
+          builder: (context, state) {
+            return const ProfileScreen();
+          }
       ),
 
       /** Top-Level Route **/

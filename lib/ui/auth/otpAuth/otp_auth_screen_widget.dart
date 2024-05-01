@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trek_master/bloc/auth/otpAuth/otp_auth_bloc.dart';
 import 'package:trek_master/ui/widgets/Buttons.dart';
 
 import '../../../res/colors/app_colors.dart';
-import '../../widgets/PlainTextFieldWidget.dart';
+import '../../widgets/TextFields.dart';
 
 class OtpAuthScreenWidget extends StatefulWidget {
   const OtpAuthScreenWidget({super.key});
@@ -12,6 +14,14 @@ class OtpAuthScreenWidget extends StatefulWidget {
 }
 
 class _OtpAuthScreenWidgetState extends State<OtpAuthScreenWidget> {
+  late OtpAuthBloc _otpAuthBloc;
+  @override
+  void initState() {
+    //Initialize bloc
+    _otpAuthBloc = BlocProvider.of(context);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,7 +76,7 @@ class _OtpAuthScreenWidgetState extends State<OtpAuthScreenWidget> {
 
 
 
-              PlainTextFieldWidget(
+              GrayLabeledTextField(
                 label: 'Enter Your OTP',
                 onChanged: (String) {  },
               ),
@@ -75,7 +85,9 @@ class _OtpAuthScreenWidgetState extends State<OtpAuthScreenWidget> {
 
               BlueElevatedLabelButton(
                   label: 'Verify & Proceed',
-                  onClick: () {}
+                  onClick: () {
+                    _otpAuthBloc.add(NavigateToProfileSetup());
+                  }
               ),
 
               const SizedBox(height: 30,),

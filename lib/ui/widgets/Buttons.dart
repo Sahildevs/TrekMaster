@@ -11,16 +11,14 @@ class BlueElevatedLabelButton extends StatelessWidget {
   });
 
   final String label;
-  final Function onClick;
+  final Function() onClick;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
       child: ElevatedButton(
-          onPressed: () {
-            onClick();
-          },
+          onPressed: onClick,
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primaryDarkBlue,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
@@ -31,7 +29,7 @@ class BlueElevatedLabelButton extends StatelessWidget {
                   fontFamily: 'Manrope',
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  color: AppColors.primaryWhite
+                  color: AppColors.white
 
               )
           )

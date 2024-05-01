@@ -79,7 +79,7 @@ class _IntroScreeWidgetState extends State<IntroScreeWidget> {
                                     fontFamily: 'Manrope',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColors.primaryWhite
+                                    color: AppColors.white
                                 )
                             )
                         ),
@@ -90,7 +90,7 @@ class _IntroScreeWidgetState extends State<IntroScreeWidget> {
                           effect: const WormEffect(
                             dotHeight: 14,
                             dotWidth: 14,
-                            dotColor: AppColors.primaryWhite,
+                            dotColor: AppColors.white,
                             activeDotColor: AppColors.primaryDarkBlue
 
                           ),
@@ -117,7 +117,7 @@ class _IntroScreeWidgetState extends State<IntroScreeWidget> {
                                 fontFamily: 'Manrope',
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                color: AppColors.primaryWhite
+                                color: AppColors.white
                             )) :
                             const Text(
                                 'NEXT',
@@ -125,7 +125,7 @@ class _IntroScreeWidgetState extends State<IntroScreeWidget> {
                                     fontFamily: 'Manrope',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColors.primaryWhite
+                                    color: AppColors.white
                                 )
                             )
                         )

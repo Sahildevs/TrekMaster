@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:trek_master/bloc/auth/otpAuth/otp_auth_bloc.dart';
+import 'package:trek_master/routes/app_routes_constants.dart';
 import 'package:trek_master/ui/auth/otpAuth/otp_auth_screen_widget.dart';
 
 class OtpAuthScreen extends StatelessWidget {
@@ -25,9 +27,9 @@ class OtpAuthScreen extends StatelessWidget {
               // TODO: Handle this case.
             case OtpAuthLoading():
               // TODO: Handle this case.
-            case OtpAuthLoadedState():
-              // TODO: Handle this case.
-            case OtpAuthErrorState():
+            case OtpAuthSuccess():
+              navigateToProfileSetupScreen(context);
+            case OtpAuthError():
               // TODO: Handle this case.
           }
         },
@@ -36,5 +38,10 @@ class OtpAuthScreen extends StatelessWidget {
 
       ),
     );
+  }
+
+  // navigate to profile setup screen
+  navigateToProfileSetupScreen(BuildContext context) {
+    context.goNamed(AppRouteConstants.profileSetupScreenRoute);
   }
 }
